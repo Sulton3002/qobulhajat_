@@ -1,0 +1,298 @@
+/* ====== GLOBAL RESET ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfcf7;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== HEADER & NAV ====== */
+header {
+  background: linear-gradient(to right, #009688, #4CAF50);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* ====== LAYOUT ====== */
+.konten {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.kiri {
+  flex: 3;
+  min-width: 0;
+}
+
+.kanan {
+  flex: 1;
+  min-width: 250px;
+}
+
+aside .widget {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.widget h4 {
+  margin-bottom: 10px;
+  color: #009688;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.widget ul {
+  list-style: none;
+}
+
+.widget ul li {
+  margin-bottom: 8px;
+}
+
+.widget ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.widget ul li a:hover {
+  color: #009688;
+}
+
+/* ====== CARD ====== */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  color: #009688;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ====== FORM & BUTTON ====== */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #009688;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #00796B;
+}
+
+/* ====== LOGIN BOX ====== */
+.login-box {
+  width: 300px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #009688;
+}
+
+/* ====== TABLE (Admin Panel) ====== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background: #009688;
+  color: white;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  background: #009688;
+  color: white;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .konten {
+    flex-direction: column;
+  }
+  .kiri, .kanan {
+    width: 100%;
+  }
+  .card img {
+    height: 150px;
+  }
+}
+
+nav a.login-link {
+  background: white;
+  color: #009688;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a.login-link:hover {
+  background: #ffd700;
+  color: #000;
+  border-color: #ffd700;
+}
+
+nav a.login-link {
+  background: white;
+  color: #009688;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  margin-left: 5px;
+}
+
+nav a.login-link:hover {
+  background: #ffd700;
+  color: #000;
+  border-color: #ffd700;
+}
+
+/* Dropdown Login */
+.dropdown {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+}
+
+.dropbtn {
+  background: white;
+  color: #009688;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #009688;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn:hover {
+  background: #ffd700;
+  color: black;
+}
