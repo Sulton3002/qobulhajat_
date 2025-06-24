@@ -23,13 +23,12 @@ include 'koneksi.php';
 
             <?php if (isset($_SESSION['user_name'])): ?>
                 <span style="color:white;">| Halo, <?php echo $_SESSION['user_name']; ?></span>
-                <a href="logout-user.php" class="login-link">Logout</a>
+                <a href="user/user-logout.php" class="login-link">Logout</a>
             <?php else: ?>
                 <div class="dropdown">
                     <button class="dropbtn">Login ▼</button>
                     <div class="dropdown-content">
-                        <a href="/login-user.php">Login User</a>
-                        <a href="admin/login.php">Login Admin</a>
+                        <a href="login.php">Masuk</a>
                     </div>
                 </div>
             <?php endif; ?>

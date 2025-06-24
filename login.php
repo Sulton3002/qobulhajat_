@@ -25,36 +25,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login - My Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Pilih Login</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body { background: #f7f7f7; }
+        .login-choice-container {
+            max-width: 350px;
+            margin: 80px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 28px 24px 28px;
+            text-align: center;
+        }
+        .login-choice-container h2 {
+            margin-bottom: 28px;
+            color: #333;
+        }
+        .login-choice-container a {
+            display: block;
+            margin: 18px 0;
+            padding: 12px 0;
+            background: #2d8cf0;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .login-choice-container a:hover {
+            background: #1976d2;
+        }
+    </style>
 </head>
 <body>
-    <?php include 'navbar.php'; ?>
-    <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-5">
-                <h2 class="mb-4">Login</h2>
-                <?php if ($error): ?>
-                    <div class="alert alert-danger"><?= $error ?></div>
-                <?php endif; ?>
-                <form method="post">
-                    <div class="mb-3">
-                        <label>Username</label>
-                        <input type="text" name="username" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label>Password</label>
-                        <input type="password" name="password" class="form-control" required>
-                    </div>
-                    <button class="btn btn-primary" type="submit">Login</button>
-                </form>
-            </div>
-        </div>
-    </main>
-    <footer class="text-center py-3">
-        &copy; Qobul Hajat 2025
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="login-choice-container">
+        <h2>Masuk Sebagai</h2>
+        <a href="admin/login.php">Admin</a>
+        <a href="user/user-login.php">User</a>
+        <a href="index.php" style="background:#aaa;">← Kembali ke Beranda</a>
+    </div>
 </body>
 </html>

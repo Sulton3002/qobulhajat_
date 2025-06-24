@@ -33,8 +33,11 @@ if (isset($_POST['login'])) {
     <form method="POST">
       <input type="email" name="email" placeholder="Email" required><br>
       <input type="password" name="password" placeholder="Password" required><br>
-      <p><a href="register.php">Belum punya akun? Daftar admin baru</a></p>
-      <button type="submit" name="login">Login</button>
+      <div class="button-group" style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+        <button type="submit" name="login" class="btn btn-primary">Login</button>
+        <a href="register.php" class="btn btn-secondary">Daftar admin baru</a>
+        <a href="../login.php" class="btn btn-secondary">← Kembali ke laman masuk</a>
+      </div>
     </form>
   </div>
 </body>
